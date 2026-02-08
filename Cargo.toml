@@ -1,0 +1,10 @@
+[package]
+name = "vector-x"
+authors = ["Jaydon Yeany"]
+description = "A simple crate for fixed-size vectors"
+license = "MIT"
+readme = "README.md"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
