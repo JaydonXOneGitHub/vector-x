@@ -1,3 +1,5 @@
+use std::fmt::Display;
+
 use crate::Vector2;
 
 /// A struct that comprises of three elements
@@ -99,5 +101,11 @@ impl<T> Into<Vector3<T>> for (Vector2<T>, T) {
     fn into(self) -> Vector3<T> {
         let (v1, v2) = self.0.into();
         return Vector3::new(v1, v2, self.1);
+    }
+}
+
+impl<T: Display> Display for Vector3<T> {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        return write!(f, "[one: {}, two: {}, three: {}", self.one, self.two, self.three);
     }
 }
