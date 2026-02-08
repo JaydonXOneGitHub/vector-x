@@ -4,9 +4,9 @@ use crate::Vector2;
 
 /// A struct that comprises of three elements
 pub struct Vector3<T> {
-    one: T,
-    two: T,
-    three: T
+    pub one: T,
+    pub two: T,
+    pub three: T
 }
 
 impl<T> Vector3<T> {
@@ -16,32 +16,6 @@ impl<T> Vector3<T> {
             two: two,
             three: three
         };
-    }
-}
-
-impl<T> Vector3<T> {
-    pub fn get_one(&self) -> &T {
-        return &self.one;
-    }
-
-    pub fn get_one_mut(&mut self) -> &mut T {
-        return &mut self.one;
-    }
-
-    pub fn get_two(&self) -> &T {
-        return &self.two;
-    }
-
-    pub fn get_two_mut(&mut self) -> &mut T {
-        return &mut self.two;
-    }
-
-    pub fn get_three(&self) -> &T {
-        return &self.three;
-    }
-
-    pub fn get_three_mut(&mut self) -> &mut T {
-        return &mut self.three;
     }
 }
 
